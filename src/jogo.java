@@ -42,4 +42,7 @@ public class jogo {
     public void setGolsfora(int golsfora) {
         this.golsfora = golsfora;
     }
+
+    public void jogar() {
+    }
 }
