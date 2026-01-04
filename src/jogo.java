@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class jogo {
     private time timecasa;
     private time timefora;
@@ -44,5 +46,24 @@ public class jogo {
     }
 
     public void jogar() {
+        Random random = new Random();
+
+        int golscasa = random.nextInt(5);
+        int golsfora = random.nextInt(5);
+
+        if (golscasa > golsfora){
+            timecasa.vencer();
+            timefora.perder();
+        }
+       else if(golsfora > golscasa){
+            timecasa.perder();
+            timefora.vencer();
+        }
+       else{
+           timecasa.empate();
+           timefora.empate();
+
+        }
+
     }
 }

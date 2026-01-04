@@ -49,4 +49,19 @@ public class time {
     public void setDerrotas(int derrotas) {
         this.derrotas = derrotas;
     }
+
+    public void vencer(){
+        pontos += 3;
+        vitorias++;
+    }
+
+    public void perder(){
+        derrotas++;
+
+    }
+    public void empate(){
+        empates +=1;
+        empates++;
+
+    }
 }
