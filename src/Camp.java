@@ -13,7 +13,7 @@ public class Camp {
         }
     }
 
-    private void criarJogos() {
+    private void criarJogos(Time timecasa, Time timefora) {
 
     }
 

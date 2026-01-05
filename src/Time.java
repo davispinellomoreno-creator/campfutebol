@@ -64,4 +64,15 @@ public class Time {
         empates++;
 
     }
+
+    @Override
+    public String toString() {
+        return "Time{" +
+                "nomedotime='" + nomedotime + '\'' +
+                ", pontos=" + pontos +
+                ", vitorias=" + vitorias +
+                ", empates=" + empates +
+                ", derrotas=" + derrotas +
+                '}';
+    }
 }
