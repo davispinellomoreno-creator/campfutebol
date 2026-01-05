@@ -1,31 +1,31 @@
 import java.util.Random;
 
-public class jogo {
-    private time timecasa;
-    private time timefora;
+public class Jogo {
+    private Time timecasa;
+    private Time timefora;
     private int golscasa;
     private int golsfora;
 
-    public jogo(time timecasa, time timefora, int golscasa, int golsfora) {
+    public Jogo(Time timecasa, Time timefora, int golscasa, int golsfora) {
         this.timecasa = timecasa;
         this.timefora = timefora;
         this.golscasa = golscasa;
         this.golsfora = golsfora;
     }
 
-    public time getTimecasa() {
+    public Time getTimecasa() {
         return timecasa;
     }
 
-    public void setTimecasa(time timecasa) {
+    public void setTimecasa(Time timecasa) {
         this.timecasa = timecasa;
     }
 
-    public time getTimefora() {
+    public Time getTimefora() {
         return timefora;
     }
 
-    public void setTimefora(time timefora) {
+    public void setTimefora(Time timefora) {
         this.timefora = timefora;
     }
 

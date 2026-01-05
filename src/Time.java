@@ -1,11 +1,11 @@
-public class time {
+public class Time {
     private String nomedotime;
     private int pontos;
     private int vitorias;
     private int empates ;
     private int derrotas;
 
-    public time(String nomedotime,int pontos, int vitorias,int empates,int derrotas) {
+    public Time(String nomedotime,int pontos, int vitorias,int empates,int derrotas) {
         this.nomedotime = nomedotime;
         this.pontos = pontos;
         this.vitorias = vitorias;
@@ -60,7 +60,7 @@ public class time {
 
     }
     public void empate(){
-        empates +=1;
+       pontos +=1;
         empates++;
 
     }
