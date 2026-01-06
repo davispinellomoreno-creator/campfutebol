@@ -5,12 +5,12 @@ public class Jogo {
     private Time timefora;
     private int golscasa;
     private int golsfora;
+    private boolean criarpartida;
 
-    public Jogo(Time timecasa, Time timefora, int golscasa, int golsfora) {
-        this.timecasa = timecasa;
-        this.timefora = timefora;
-        this.golscasa = golscasa;
-        this.golsfora = golsfora;
+
+    public Jogo(Time timeCasa, Time timeFora) {
+        this.timecasa = timeCasa;
+        this.timefora = timeFora;
     }
 
     public Time getTimecasa() {
@@ -29,41 +29,31 @@ public class Jogo {
         this.timefora = timefora;
     }
 
-    public int getGolscasa() {
-        return golscasa;
-    }
-
-    public void setGolscasa(int golscasa) {
-        this.golscasa = golscasa;
-    }
-
-    public int getGolsfora() {
-        return golsfora;
-    }
-
-    public void setGolsfora(int golsfora) {
-        this.golsfora = golsfora;
-    }
 
     public void jogar() {
         Random random = new Random();
 
-        int golscasa = random.nextInt(5);
-        int golsfora = random.nextInt(5);
+        this.golscasa = random.nextInt(5);
+        this.golsfora = random.nextInt(5);
 
-        if (golscasa > golsfora){
+        if (golscasa > golsfora) {
             timecasa.vencer();
             timefora.perder();
-        }
-       else if(golsfora > golscasa){
+        } else if (golsfora > golscasa) {
             timecasa.perder();
             timefora.vencer();
-        }
-       else{
-           timecasa.empate();
-           timefora.empate();
+        } else {
+            timecasa.empate();
+            timefora.empate();
 
         }
 
+    }
+
+    @Override
+    public String toString() {
+        return timecasa.getnomedotime() + " " + golscasa +
+                " x " + golsfora + " " +
+                timefora.getnomedotime();
     }
 }
