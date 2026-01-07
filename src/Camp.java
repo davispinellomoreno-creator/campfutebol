@@ -33,6 +33,10 @@ public class Camp {
             }
         }
     }
+    public static void mostrarTabela (){
+        System.out.println("------------TABELA DA SUPERCOPA BRASILEIRA");
+        System.out.println("Primeiro lugar"  );
+    }
 }
 
 
