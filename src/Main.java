@@ -24,6 +24,8 @@ public class Main {
 
         Camp.iniciar();
 
+        Camp.mostrarTabela();
+
         System.out.println("\nCampeonato finalizado.");
     }
 }

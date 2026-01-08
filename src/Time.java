@@ -75,4 +75,8 @@ public class Time {
                 ", derrotas=" + derrotas +
                 '}';
     }
+
+    public int getvitorias() {
+        return vitorias;
+    }
 }

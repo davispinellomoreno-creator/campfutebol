@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,10 +35,32 @@ public class Camp {
         }
     }
     public static void mostrarTabela (){
-        System.out.println("------------TABELA DA SUPERCOPA BRASILEIRA");
-        System.out.println("Primeiro lugar"  );
-    }
+
+        times.sort((time1, time2) -> {
+
+            // 1º critério: pontos
+            if (time2.getpontos() != time1.getpontos()) {
+                return time2.getpontos() - time1.getpontos();
+            }
+
+            // 2º critério: vitórias
+            return time2.getVitorias() - time1.getVitorias();
+        });
+
+        System.out.println("=================TABELA====================");
+       int posicao = 1;
+       for(Time time : times){
+           System.out.println(posicao + "º lugar - " + time.getnomedotime() +
+                   "Vitorias :" + time.getVitorias() +
+                    "Empates :" + time.getEmpates() +
+                    "derrotas:" + time.getDerrotas()) ;
+
+           posicao++;
+       }
+
 }
+}
+
 
 
 
